@@ -5,6 +5,8 @@ workflows:
     environment:
       flutter: stable
     scripts:
+      - name: Générer les fichiers de plateforme manquants
+        script: flutter create --platforms=android .
       - name: Récupérer les dépendances
         script: flutter pub get
       - name: Builder l'APK (release)
